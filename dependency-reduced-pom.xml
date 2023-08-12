@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.keshav</groupId>
+  <artifactId>elasticsearch-to-s3-lambda</artifactId>
+  <name>elasticsearch-to-s3-lambda</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>pull data from elasticsearch and push to s3</description>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.1.13.RELEASE</version>
+        <configuration>
+          <mainClass>com.keshav.elasticsearchtos3lambda.handler.ElasticSearchToS3LambdaHandler</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j2-impl</artifactId>
+      <version>2.20.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

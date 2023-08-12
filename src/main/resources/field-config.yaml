@@ -1,0 +1,5 @@
+field-config:
+  mappings:
+    director: string
+    title: string
+    year: integer
