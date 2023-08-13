@@ -26,7 +26,6 @@ public class S3Service {
 	private AmazonS3 s3Client;
 
 	public void putObjectTOS3(String jsonData) {
-		LOGGER.info("putObjectTOS3 jsonData: {}", jsonData);
 		String objectKey = s3FileName + ".json";
 		// Upload the JSON string to S3
         byte[] contentBytes = jsonData.getBytes();

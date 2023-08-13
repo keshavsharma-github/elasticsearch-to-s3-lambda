@@ -29,9 +29,6 @@ public class QueryBuilderService {
 	public List<Query> buildFilterQueries(Map<String, String> queryConfig) {
 		LOGGER.info("buildFilterQuery queryConfig: {}", queryConfig);
 		List<Query> allQueries = new ArrayList<>();
-		 for (Map.Entry<String, String> entry : fieldMappings.getMappings().entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
 		for (Map.Entry<String, String> entry : queryConfig.entrySet()) {
 			String fieldName = entry.getKey();
 			String fieldValue = entry.getValue();
